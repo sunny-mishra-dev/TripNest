@@ -18,21 +18,25 @@ db.once("open", () => {
 });
 
 
-
-
-
-app.get("/testListing", async (req, res) => {
-  let sampleListing = new Listing({
-    title : "My New Villa",
-    description : "By the Beach",
-    price : 1200,
-    location : "Calangute, Goa",
-    country : "India",
+app.get("/listings", async (req, res) => {
+  let allListings = await Listing.find({}).then(res => {
+    console.log(res)
   })
-  await sampleListing.save();
-  console.log("Sample was saved")
-  return res.status(200).send("Successful testing")
 })
+
+
+// app.get("/testListing", async (req, res) => {
+//   let sampleListing = new Listing({
+//     title : "My New Villa",
+//     description : "By the Beach",
+//     price : 1200,
+//     location : "Calangute, Goa",
+//     country : "India",
+//   })
+//   await sampleListing.save();
+//   console.log("Sample was saved")
+//   return res.status(200).send("Successful testing")
+// })
 
 app.get("/", (req, res) => {
   return res.send("This is root path");

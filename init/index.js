@@ -18,5 +18,4 @@ const initDB = () => {
     Listing.insertMany(initData.data);
     console.log("data was initialized");
 };
-
 initDB();
