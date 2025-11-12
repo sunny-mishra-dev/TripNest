@@ -43,6 +43,9 @@ app.get("/", (req, res) => {
 })
 
 
+console.log("Something new")
+
+
 
 
 
