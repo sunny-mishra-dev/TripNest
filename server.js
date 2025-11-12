@@ -44,6 +44,9 @@ app.get("/", (req, res) => {
 
 
 console.log("Something new")
+function print() {
+  console.log("This is something")
+}
 
 
 
