@@ -51,6 +51,7 @@ function print() {
 
  
 console.log("Hey this is me")
+console.log("Nothing")
 
 
 
