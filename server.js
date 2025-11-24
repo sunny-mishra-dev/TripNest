@@ -49,10 +49,6 @@ function print() {
 }
 
 
- 
-console.log("Hey this is me")
-console.log("Nothing")
-console.log("Hello Everyone")
 
 
 
